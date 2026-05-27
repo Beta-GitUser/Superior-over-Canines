@@ -1,4 +1,4 @@
-name: Repo Watcher
+name: Watchful
 
 on:
   schedule:
@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Check latest commit
         run: |
-          curl https://api.github.com/repos/torvalds/linux/commits > commits.json
+          curl https://api.github.com/repos/Beta-GitUser/Superior-than-Wolves/commits > commits.json
 
       - name: Send Telegram message
         run: |
