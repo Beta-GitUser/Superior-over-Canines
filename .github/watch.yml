@@ -1,0 +1,23 @@
+name: Repo Watcher
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check latest commit
+        run: |
+          curl https://api.github.com/repos/torvalds/linux/commits > commits.json
+
+      - name: Send Telegram message
+        run: |
+          MESSAGE=$(jq -r '.[0].commit.message' commits.json)
+
+          curl -s -X POST \
+            https://api.telegram.org/bot${{ secrets.BOT_TOKEN }}/sendMessage \
+            -d chat_id=${{ secrets.CHAT_ID }} \
+            -d text="$MESSAGE"
