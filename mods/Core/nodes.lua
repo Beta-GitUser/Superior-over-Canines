@@ -16,7 +16,7 @@ register_node("soc:stone", {
 })
 
 register_node("soc:tree", {
-    description = "trees...",
+    description = "Trunk",
     tiles = {
         "soc_treetop.png",
         "soc_treetop.png",
@@ -32,11 +32,10 @@ register_node("soc:tree", {
 })
 
 register_node("soc:leaves", {
-	description = ("leaves..."),
+	description = "Leaves",
 	drawtype = "allfaces_optional",
 	waving = 1,
 	tiles = {"soc_leaves.png"},
-	special_tiles = {"default_leaves_simple.png"},
 	paramtype = "light",
 	groups = { snappy = 3 },
 	stack_max = 64
@@ -52,11 +51,12 @@ register_node("soc:grass", {
     
     groups = { crumbly = 2 },
     
-    stack_max = 64
+    stack_max = 64,
+	drop = "soc:dirt"
 })
 
 register_node("soc:dirt", {
-    description = "it's dirty",
+    description = "Dirt",
     tiles = { "soc_dirt.png" },
     
     groups = { crumbly = 1 },
@@ -73,7 +73,10 @@ register_node("soc:foliage", {
 	paramtype = "light",
 	walkable = false,
 	buildable_to = true,
-	groups = { snappy = 3 },
+	groups = {
+		snappy = 3,
+		attached_node = 1
+	},
 	selection_box = {
 	    type = "fixed",
 	    fixed = box
@@ -86,7 +89,7 @@ register_alias('mapgen_stone', 'soc:stone')
 -- if you're seeing this, then most likely i didn't made bajillion of variations of them. I know, i certainly could've just automate this using a system like minetest flowers. But i'm a lazy fuck so yeah'
 
 register_node("soc:stonep1", {
-    description = "Stone",
+    description = "dude how the fuck",
     tiles = { "soc_stone.png^soc_prog1.png" }, -- this modification thing is a W
     groups = { cracky = 1 },
     is_ground_content = true,
