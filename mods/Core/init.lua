@@ -1,0 +1,10 @@
+corepath = core.get_modpath("soc")
+
+dofile(corepath .. "/func.lua")
+dofile(corepath .. "/items.lua")
+dofile(corepath .. "/nodes.lua")
+dofile(corepath .. "/formspecs.lua")
+dofile(corepath .. "/crafts.lua")
+dofile(corepath .. "/mapgendeco.lua")
+dofile(corepath .. "/mapgenv7.lua")
+dofile(corepath .. "/debug.lua")
