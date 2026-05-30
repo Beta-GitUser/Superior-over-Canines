@@ -65,6 +65,7 @@ register_item("soc:crude_stone_hatchet", {
 })
 
 register_item("soc:rock", {
+    description = "Rock",
     type = "none",
     inventory_image = "soc_rock.png",
     stack_max = 64
@@ -93,6 +94,7 @@ register_tool("soc:sharp_rock", {
 })
 
 register_item("soc:stick", {
+    description = "Stick",
     type = "none",
     inventory_image = "soc_stick.png",
     stack_max = 64
@@ -121,6 +123,7 @@ register_tool("soc:sharp_stick", {
 })
 
 register_item("soc:plant_fiber", {
+    description = "Plant fiber",
     type = "none",
     inventory_image = "soc_plantfiber.png",
     stack_max = 64
