@@ -43,7 +43,7 @@ register_craft({
 register_craft({
     type = "shapeless",
     
-    output = "soc:sharpstick",
+    output = "soc:sharp_stick",
     
     recipe = { "soc:stick" }
 })
