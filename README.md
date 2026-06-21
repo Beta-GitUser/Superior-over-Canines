@@ -1,4 +1,4 @@
-# Superior-over-Canines
+# Better than Minetest
 A Luanti game project that aims to recreate/port Better than Wolves, with fully custom content.
 
 
